@@ -30,12 +30,5 @@ It takes an a parameter and performs multiplication with a predefined constant b
 It first checks if a is greater than zero using the require statement.
 If the condition fails, it reverts the transaction with a custom error message stating that the value of a should not be zero.
 If the condition is met, it returns the result of the multiplication.
-Usage
-Make sure you have Solidity ^0.8.17 installed.
-Compile and deploy the ErrorHandling contract to a supported Ethereum network.
-Interact with the deployed contract by calling the available functions and providing the required parameters.
 
 
-VIDEO EXPLANATION
-
-https://www.loom.com/share/88b4f529a1884ecda8ba3fb932dd99ac
