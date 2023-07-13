@@ -1,34 +1,11 @@
-ErrorHandling Contract
+This assessment is part of the MetaCrafters ETH+AVAX certification course This course provides an in-depth knowledge of Solidity features and error handling. This review had to show Solidity's implementation of error handling. Error handling in programming is the technique of handling errors that occur during program execution. This is useful for dealing with interruptions or executing other instructions in response to errors. In Solidity, error handling is implemented using three main functions: Require, Revert and Assert.
 
-This is a Solidity smart contract that demonstrates different error handling techniques using assert, revert, and require functions.
-
-License
-
-This contract is using the MIT License.
-
-Prerequisites
-
-Solidity ^0.8.17
-
-Contract Details
-
-The ErrorHandling contract provides the following functions:
-
-testAssert(uint num)
-
-This function demonstrates the usage of the assert function.
-It takes a num parameter and checks if it is not equal to zero using the assert statement.
-If the condition fails, it triggers an "Internal error" and aborts the execution.
-divide(uint _numerator, uint _denominator)
-This function demonstrates the usage of the revert function.
-It takes _numerator and _denominator parameters and performs division.
-If the _numerator is less than _denominator, it reverts the transaction with a custom error message stating that the numerator should be greater than the denominator.
-If the condition is met, it returns the result of the division.
-mult(uint a)
-This function demonstrates the usage of the require function.
-It takes an a parameter and performs multiplication with a predefined constant b.
-It first checks if a is greater than zero using the require statement.
-If the condition fails, it reverts the transaction with a custom error message stating that the value of a should not be zero.
-If the condition is met, it returns the result of the multiplication.
-
-
+revert
+ revert takes one argument and one message (optional)
+ Each time EVM encounters a revert function, it resets the state of the smart contract to its initial state and returns the passed message.
+ This function should be called within a conditional block to filter conditions that raise an error.
+ Syntax: revert(message)
+assert
+assert takes one argument,a condition (required)
+If the condition resolves to false, the assertion resets the state of the smart contract to its initial state and returns the passed message.
+Syntax: assert(condition)
